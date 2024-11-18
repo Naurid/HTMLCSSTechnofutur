@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -7,24 +9,24 @@ body{
 }
 nav{
     width: 100vw;
-    height: 10rem;
+    height: 80px;
     background: #000000;
     padding: 0.5rem 1rem;
+    margin: auto;
 }
 
 ul{
     display: flex;
     width: 100%;
     justify-content: center;
-    gap: 1rem;
-    padding: 0.5rem 1rem;
 }
 
 a{
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
-    border-right: 1px solid white;
-    padding: 0.5rem 1rem;
+}
+li::marker{
+    color: transparent;
 }
 
 p{
@@ -37,6 +39,38 @@ p{
 }
 
 strong{
+    font-size: 1.4vw;
     font-weight: 600;
-    margin: 1rem 1rem;
+}
+
+#slide2{
+    position: absolute;
+    width: 50%;
+    top: -1000px;
+    left: 25%;
+    margin: auto;
+    transition: all 0.8s cubic-bezier(.49,.22,.52,1) , margin 0.8s cubic-bezier(.49,.22,.52,1) 0.8s;
+}
+
+#slide2:target{
+    position: absolute;
+    margin: auto;
+    top: 7rem;
+    background-color: white;
+}
+
+#slide3{
+    position: absolute;
+    top: -1000px;
+    left: 25%;
+    width: 50%;
+    margin: auto;
+    background-color: #7f7f7f;
+    transition: all 0.8s cubic-bezier(.49,.22,.52,1) , margin 0.8s cubic-bezier(.49,.22,.52,1) 0.8s;
+}
+
+#slide3:target{
+    position: absolute;
+    margin: auto;
+    top: 7rem;
 }

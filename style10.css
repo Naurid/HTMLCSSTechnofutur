@@ -1,0 +1,91 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding-top: 50px;
+    background-color: rgb(108, 108, 108);
+}
+
+.main1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 500px;
+    background-color: #434343;
+    gap: 1rem;
+    padding: 2px;
+}
+
+.main2,
+ul{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    height: 200px;
+    background-color: #434343;
+    gap: 1rem;
+    padding: 2px;
+}
+
+.main2 p:nth-child(even){
+    align-self: flex-end;
+}
+.main2 p:nth-child(odd){
+    align-self: flex-start;
+}
+
+.main2 p:first-child{
+    align-self: center;
+}
+
+p,
+li{
+    border: 1px solid white;
+    background-color: rgb(108, 108, 108);
+    padding: 2px;
+    width: fit-content;
+}
+
+ul{
+    height: auto;
+}
+li:nth-child(1){
+    order: 1;
+}
+li:nth-child(2){
+    order: 3;
+}
+li:nth-child(3){
+    order: 2;
+}
+li:nth-child(4){
+    order: 4;
+}
+
+.main3,
+.main4{
+    display: flex;
+    flex-direction: row;
+    background-color: #434343;
+    margin-bottom: 10rem;
+}
+
+.main3 > p:first-child,
+.main3 > p:last-child{
+    flex : 1;
+    color: red;
+}
+
+.main4 > p:first-child {
+    flex: 2;
+    color: red;
+}
+
+.main4 > p:nth-last-child(-n+3) {
+    flex: 1;
+    color: red;
+}
